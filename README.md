@@ -1,7 +1,7 @@
-# Unreal 4 Project Copy / Rename - aka "kopiarka"
+# Unreal 4 Project Copy / Rename Tool - aka "kopiarka"
 
 
-This is a small utility that allows you to take one Unreal 4 project and copy/rename/update file references from one directory to another.
+This is a small utility that allows you to take one Unreal 4 Blueprint / C++ project and copy/rename/update file references from one directory to another.
 
 It can also be used to move/rename any other directories or files but it may not behave 100% due to how it renames contents of ascii files.
 

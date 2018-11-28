@@ -17,6 +17,7 @@
 package com.jollymonsterstudio.unreal.service;
 
 import com.jollymonsterstudio.test.config.TestConfig;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,7 @@ public class CopyServiceTest {
     private CopyService copyService;
 
     @Test
+    @Ignore // not used right now
     public void runCopyTest() {
         copyService.copy();
     }

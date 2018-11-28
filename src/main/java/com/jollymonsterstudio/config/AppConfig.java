@@ -18,13 +18,11 @@ package com.jollymonsterstudio.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
 /**
  * AppConfig - primary configuration class, will contain all bean and config logic
  */
 @Configuration
-@PropertySource("config.properties")
 @ComponentScan("com.jollymonsterstudio.unreal")
 public class AppConfig {
 

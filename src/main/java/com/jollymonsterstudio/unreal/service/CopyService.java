@@ -73,7 +73,7 @@ public class CopyService {
         LOGGER.info("------------");
 
         try {
-            Assert.isTrue(StringUtils.isNotEmpty(sourceDir), "Source directory cannot ee empty");
+            Assert.isTrue(StringUtils.isNotEmpty(sourceDir), "Source directory cannot be empty");
             Assert.isTrue(StringUtils.isNotEmpty(sourceName), "Source project name cannot be empty");
 
             Assert.isTrue(new File(sourceDir).exists(), "Source directory does not exist, check your folder configuration");

@@ -189,7 +189,6 @@ public class UnrealFileVisitor extends SimpleFileVisitor<Path> {
      * @param file the current file we are processing
      * @param attrs any file attributes used for additional filtering
      * @return {@see FileVisitResult}
-     * @throws IOException in case touching the disk blows up
      */
     @Override
     public FileVisitResult visitFile(final Path file, final BasicFileAttributes attrs) {
@@ -197,8 +196,10 @@ public class UnrealFileVisitor extends SimpleFileVisitor<Path> {
         Path currentPath = file;
 
         // skip any file that belongs to an ignored dir
+        String absoluteFilePath = currentPath.toAbsolutePath().toString();
         for(String ignoredDir : ignoredDirs) {
-            if(currentPath.toAbsolutePath().toString().startsWith(ignoredDir)) {
+            // special case for gitignore
+            if(absoluteFilePath.startsWith(ignoredDir) && !absoluteFilePath.contains(".gitignore")) {
                 currentPath = null;
                 break;
             }
@@ -206,7 +207,7 @@ public class UnrealFileVisitor extends SimpleFileVisitor<Path> {
 
         if(currentPath != null) {
             // lets start checking our extensions against the white list
-            String extension = FilenameUtils.getExtension(currentPath.toAbsolutePath().toString());
+            String extension = FilenameUtils.getExtension(absoluteFilePath);
             if(StringUtils.isNotEmpty(extension)) {
                 // check if file is binary or ascii in which case we can update the contents of the ascii ones
                 FileType fileType = null;

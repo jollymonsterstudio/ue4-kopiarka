@@ -7,6 +7,12 @@ It can also be used to move/rename any other directories or files but it may not
 
 The primary motivation for this tool was to be able to quickly work on one project to create a baseline, copy the baseline to a new project, and keep iterating without having to create a ton of git branches in a single project.
 
+### Changelog
+
+[Release 1.0.0 - Download](https://github.com/jollymonsterstudio/ue4-kopiarka/releases/tag/1.0.0)
+* initial project release
+* only tested on Windows
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -16,12 +22,6 @@ These instructions will get you a copy of the project up and running on your loc
 Install Java 1.8 or greater
  
 Instructions: https://www.java.com/en/download/help/index_installing.xml?os=Windows+10&j=8&n=20
-
-### Change log
-
-[Release 1.0.0 - Download](https://github.com/jollymonsterstudio/ue4-kopiarka/releases/tag/1.0.0)
-* initial project release
-* only tested on Windows
 
 ### Configuration
 The project comes with an `application.properties` that needs to be updated prior to execution and placed along side the jar file in the same directory you will be running it from.

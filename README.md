@@ -17,6 +17,12 @@ Install Java 1.8 or greater
  
 Instructions: https://www.java.com/en/download/help/index_installing.xml?os=Windows+10&j=8&n=20
 
+### Change log
+
+[Release 1.0.0 - Download](https://github.com/jollymonsterstudio/ue4-kopiarka/releases/tag/1.0.0)
+* initial project release
+* only tested on Windows
+
 ### Configuration
 The project comes with an `application.properties` that needs to be updated prior to execution and placed along side the jar file in the same directory you will be running it from.
 

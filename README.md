@@ -8,13 +8,13 @@ It can also be used to move/rename any other directories or files but it may not
 The primary motivation for this tool was to be able to quickly work on one project to create a baseline, copy the baseline to a new project, and keep iterating without having to create a ton of git branches in a single project.
 
 ### Changelog
-[Release 1.0.2 - Download](https://github.com/jollymonsterstudio/ue4-kopiarka/releases/tag/1.0.2)
+[Release 1.0.2 - Latest Download](https://github.com/jollymonsterstudio/ue4-kopiarka/releases/tag/1.0.2)
 * fixed one issue where similar names as part of nested directories caused the old project name to be retained
 
-[Release 1.0.1 - Download](https://github.com/jollymonsterstudio/ue4-kopiarka/releases/tag/1.0.1)
+Release 1.0.1
 * fixed one minor issue where folders that had prefix or suffixes around the old project name would not get copied over correctly
 
-[Release 1.0.0 - Download](https://github.com/jollymonsterstudio/ue4-kopiarka/releases/tag/1.0.0)
+Release 1.0.0
 * initial project release
 * only tested on Windows
 

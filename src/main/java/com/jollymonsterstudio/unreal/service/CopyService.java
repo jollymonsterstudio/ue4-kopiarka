@@ -123,6 +123,7 @@ public class CopyService {
                 fileVisitor.finished();
             } catch (IOException e) {
                 LOGGER.error("Unable to copy to target directory: {} something blew up, please validate the contents of your source folder and that the correct target permissions exist", targetName);
+                LOGGER.error(e.getLocalizedMessage(), e);
                 // hard stop
                 exitApplication();
             }

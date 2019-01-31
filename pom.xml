@@ -6,7 +6,7 @@
 
     <groupId>com.jollymonsterstudio.unreal</groupId>
     <artifactId>ue4-kopiarka</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <description>unreal project copy / name changer util</description>

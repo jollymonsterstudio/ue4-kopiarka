@@ -157,10 +157,13 @@ public class UnrealFileVisitor extends SimpleFileVisitor<Path> {
                 // create the new directory based on inital params
                 Path newDirectory = target.resolve(source.relativize(currentPath));
                 // check to see if directory contains references to old project name
-                if(processingChildDir && currentPath.getFileName().toString().contains(oldProjectName)) {
+                if(processingChildDir && (currentPath.getFileName().toString().contains(oldProjectName) || newDirectory.toString().contains(oldProjectName))) {
                     // rename accordingly if found
                     String newPath = newDirectory.toAbsolutePath().toString().substring(0, newDirectory.toAbsolutePath().toString().lastIndexOf(File.separator));
-                    newDirectory = Paths.get(newPath).resolve(currentPath.getFileName().toString().replace(oldProjectName, newProjectName));
+                    if(newPath.contains(oldProjectName)) {
+                        newPath = newPath.replace(oldProjectName, newProjectName);
+                    }
+                    newDirectory = Paths.get(newPath).resolve(currentPath.toAbsolutePath().toString().replace(oldProjectName, newProjectName));
                 }
 
                 // lastly trigger the copy against the new folder name

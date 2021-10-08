@@ -17,21 +17,19 @@
 package com.jollymonsterstudio.unreal.service;
 
 import com.jollymonsterstudio.test.config.TestConfig;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {TestConfig.class})
 public class CopyServiceTest {
     @Autowired
     private CopyService copyService;
 
     @Test
-    @Ignore // not used right now
     public void runCopyTest() {
         copyService.copy();
     }
